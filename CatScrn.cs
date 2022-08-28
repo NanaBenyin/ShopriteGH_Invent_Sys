@@ -65,7 +65,7 @@ namespace ShopRite_IMS
             log.Show();
         }
 
-        
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -79,10 +79,10 @@ namespace ShopRite_IMS
                 else
                 {
                     Con.Open();
-                    string query = "delete from product where ProdId=" + CatId.Text + "";
+                    string query = "delete from categorytable where CatId=" + CatId.Text + "";
                     MySqlCommand cmd = new MySqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Product successfuly deleted");
+                    MessageBox.Show("Section successfuly deleted");
                     Con.Close();
                     populate();
                 }
@@ -94,7 +94,7 @@ namespace ShopRite_IMS
 
             }
         }
-        
+
 
         private void CatScrn_Load(object sender, EventArgs e)
         {
@@ -106,6 +106,51 @@ namespace ShopRite_IMS
             this.Hide();
             SellingScrn log = new SellingScrn();
             log.Show();
+        }
+
+        private void DGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CatId.Text = DGV1.SelectedRows[0].Cells[0].Value.ToString();
+            Catname.Text = DGV1.SelectedRows[0].Cells[1].Value.ToString();
+            Catdesc.Text = DGV1.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+
+                //MySqlConnection Conn = new MySqlConnection("server=localhost;database=shopritedb;uid=root;pwd=;");
+
+                Con.Open();
+
+                //string sqlStatement = $"INSERT INTO productcattable( CatId, CatName, CatDesc) VALUES ('{this.CatId.Text}','{this.Catname.Text}','{this.Catdesc.Text}')";
+                string sqlStatement = "INSERT INTO shoprite_ims.categorytable( CatId, CatName, CatDesc) VALUES ('" + this.CatId.Text + "','" + this.Catname.Text + "','" + this.Catdesc.Text + "');";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show(this.Catname.Text + " has been successfully added to the product category catalog");
+
+
+
+                string query = "select * from categorytable";
+                MySqlDataAdapter sda = new MySqlDataAdapter(query, Con);
+                MySqlCommandBuilder builder = new MySqlCommandBuilder(sda);
+
+                var ds = new DataSet();
+                sda.Fill(ds);
+                DGV1.DataSource = ds.Tables[0];
+
+
+                Con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

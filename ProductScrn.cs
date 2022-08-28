@@ -250,5 +250,16 @@ namespace ShopRite_IMS
             FillCombo();
             populate();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+            {
+                this.Hide();
+                LoginScrn log = new LoginScrn();
+                log.Show();
+            }
+
+        }
     }
 }

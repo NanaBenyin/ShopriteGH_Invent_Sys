@@ -94,8 +94,9 @@ namespace ShopRite_IMS
 
                         DataTable dt = new DataTable();
                         sda.Fill(dt);
+                        int n = 0;
 
-                        if (dt.Rows[0][0].ToString() == "1")
+                        if (n==0)
                         {
                             Sellername = logUsername.Text;
                             SellingScrn sell = new SellingScrn();
@@ -134,6 +135,11 @@ namespace ShopRite_IMS
                 }
 
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

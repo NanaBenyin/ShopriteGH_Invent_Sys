@@ -57,8 +57,6 @@
             this.DGV7 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.DGV6 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ProdQty = new Guna.UI2.WinForms.Guna2TextBox();
-            this.button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Ghc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -184,7 +182,7 @@
             this.ORDERDGV.RowHeadersVisible = false;
             this.ORDERDGV.RowHeadersWidth = 82;
             this.ORDERDGV.RowTemplate.Height = 33;
-            this.ORDERDGV.Size = new System.Drawing.Size(899, 294);
+            this.ORDERDGV.Size = new System.Drawing.Size(1130, 294);
             this.ORDERDGV.TabIndex = 30;
             this.ORDERDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ORDERDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -249,7 +247,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1601, 228);
+            this.panel1.Size = new System.Drawing.Size(1832, 228);
             this.panel1.TabIndex = 29;
             // 
             // Seller1
@@ -272,7 +270,7 @@
             this.guna2Button4.FillColor = System.Drawing.Color.DodgerBlue;
             this.guna2Button4.Font = new System.Drawing.Font("Candara", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(1388, 53);
+            this.guna2Button4.Location = new System.Drawing.Point(1450, 34);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(187, 53);
             this.guna2Button4.TabIndex = 30;
@@ -342,7 +340,7 @@
             this.DGV7.RowHeadersVisible = false;
             this.DGV7.RowHeadersWidth = 82;
             this.DGV7.RowTemplate.Height = 33;
-            this.DGV7.Size = new System.Drawing.Size(899, 340);
+            this.DGV7.Size = new System.Drawing.Size(1130, 340);
             this.DGV7.TabIndex = 39;
             this.DGV7.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DGV7.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -390,12 +388,12 @@
             this.DGV6.DefaultCellStyle = dataGridViewCellStyle9;
             this.DGV6.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DGV6.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV6.Location = new System.Drawing.Point(48, 790);
+            this.DGV6.Location = new System.Drawing.Point(48, 687);
             this.DGV6.Name = "DGV6";
             this.DGV6.RowHeadersVisible = false;
             this.DGV6.RowHeadersWidth = 82;
             this.DGV6.RowTemplate.Height = 33;
-            this.DGV6.Size = new System.Drawing.Size(513, 237);
+            this.DGV6.Size = new System.Drawing.Size(513, 340);
             this.DGV6.TabIndex = 40;
             this.DGV6.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DGV6.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -438,36 +436,6 @@
             this.ProdQty.SelectedText = "";
             this.ProdQty.Size = new System.Drawing.Size(221, 58);
             this.ProdQty.TabIndex = 41;
-            // 
-            // button3
-            // 
-            this.button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button3.FillColor = System.Drawing.Color.DodgerBlue;
-            this.button3.Font = new System.Drawing.Font("Candara", 10F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(306, 670);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(255, 64);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "Refresh";
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Categories",
-            "More ",
-            "Mango"});
-            this.comboBox2.Location = new System.Drawing.Point(48, 687);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(237, 47);
-            this.comboBox2.TabIndex = 44;
             // 
             // label4
             // 
@@ -554,14 +522,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1600, 1128);
+            this.ClientSize = new System.Drawing.Size(1859, 1128);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Ghc);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.ProdQty);
             this.Controls.Add(this.DGV6);
             this.Controls.Add(this.DGV7);
@@ -601,8 +567,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView DGV7;
         private Guna.UI2.WinForms.Guna2DataGridView DGV6;
         private Guna.UI2.WinForms.Guna2TextBox ProdQty;
-        private Guna.UI2.WinForms.Guna2Button button3;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Ghc;
         private System.Windows.Forms.Label label5;
