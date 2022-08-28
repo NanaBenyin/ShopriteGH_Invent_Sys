@@ -16,7 +16,7 @@ namespace ShopRite_IMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageSellers());
+            Application.Run(new ProductScrn());
         }
     }
 }
